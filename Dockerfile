@@ -10,6 +10,6 @@ COPY . .
 
 CMD ["npm","run","build"]
 
-FROM ngninx:alpine 
+FROM nginx 
 
 COPY --from=builder /app/build /usr/share/nginx/html
